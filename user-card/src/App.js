@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import GitCard from './Components/GitCards';
+import GitCard from './Components/GitCard';
 
 function App() {
   return (
