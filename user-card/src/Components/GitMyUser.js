@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import GitCard from './GitCard';
+import GitMyCard from './GitMyCard';
 
-class GitUser extends Component {
+class GitMyUser extends Component {
 
     state = {
         user: [ ]
@@ -24,11 +24,11 @@ class GitUser extends Component {
     render() {
         return (
             <div>
-            <GitCard user={this.state.user} image={this.state.image} bio={this.state.bio} />
+            <GitMyCard user={this.state.user} image={this.state.image} bio={this.state.bio} />
             </div>
         )
     }
 
 }
 
-export default GitUser;
+export default GitMyUser;

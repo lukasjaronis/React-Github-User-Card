@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const GitCardStyles = styled.div`
+const GitMyCardStyles = styled.div`
   .outerContainer {
    
       display: flex;
@@ -21,7 +21,7 @@ const GitCardStyles = styled.div`
         width: 50%;
 
       img {
-        height: 20rem;
+        height: 15rem;
         border-radius: 15px;
       }
 
@@ -51,9 +51,9 @@ const GitCardStyles = styled.div`
   }
 `;
 
-const GitCard = ({ user, image, bio }) => {
+const GitMyCard = ({ user, image, bio }) => {
   return (
-    <GitCardStyles>
+    <GitMyCardStyles>
       <div className="outerContainer">
         <div className="innerContainer">
           <img src={image} />
@@ -63,8 +63,8 @@ const GitCard = ({ user, image, bio }) => {
           </div>
         </div>
       </div>
-    </GitCardStyles>
+    </GitMyCardStyles>
   );
 };
 
-export default GitCard;
+export default GitMyCard;
