@@ -51,14 +51,14 @@ const GitMyCardStyles = styled.div`
   }
 `;
 
-const GitMyCard = ({ user, image, bio }) => {
+const GitMyCard = ({ name, image, bio }) => {
   return (
     <GitMyCardStyles>
       <div className="outerContainer">
         <div className="innerContainer">
-          <img src={image} />
+          <img src={image} alt={name} />
           <div className="contentContainer">
-            <span>{user}</span>
+            <span>{name}</span>
             <span>{bio}</span>
           </div>
         </div>

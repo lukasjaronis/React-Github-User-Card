@@ -3,7 +3,7 @@ import './App.css';
 import styled from 'styled-components';
 
 import GitMyUser from './Components/GitMyUser';
-
+import GitFollower from './Components/GitFollower';
 
 const AppStyles = styled.div`
 
@@ -21,6 +21,7 @@ function App() {
     <AppStyles>
     <div className="App">
 <GitMyUser />
+<GitFollower />
     </div>
     </AppStyles>
   );

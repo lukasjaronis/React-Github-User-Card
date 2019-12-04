@@ -3,22 +3,20 @@ import styled from "styled-components";
 
 const GitFollowCardStyles = styled.div`
   .outerContainer {
-   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: #1f2833;
+
+    .innerContainer {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 100%;
-      background: #1f2833;
-
-
-    .innerContainer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-        border-radius: 15px;
-        margin: 2rem;
-        width: 50%;
+      flex-direction: row;
+      border-radius: 15px;
+      margin: 2rem;
+      width: 50%;
 
       img {
         height: 15rem;
@@ -26,40 +24,38 @@ const GitFollowCardStyles = styled.div`
       }
 
       .contentContainer {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          width: 50%;
-          margin: 0 auto;
-        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 50%;
+        margin: 0 auto;
+
         span {
-            margin: 1rem;
-            font-size: 1.5rem;
-            font-weight: 900;
+          margin: 1rem;
+          font-size: 1.5rem;
+          font-weight: 900;
+          color: white;
 
-            &:first-child {
-                color: #66fcf1;
-            }
-
-            &:last-child {
-                color: #45a29e;
-            }
+          &:first-child {
+            color: #66fcf1;
+          }
         }
       }
     }
   }
 `;
 
-const GitFollowCard = ({ user, image, bio }) => {
+const GitFollowCard = ({ followers, user, image, bio }) => {
   return (
     <GitFollowCardStyles>
       <div className="outerContainer">
         <div className="innerContainer">
-          <img src={image} />
+          <img src={image} alt={user} />
           <div className="contentContainer">
             <span>{user}</span>
             <span>{bio}</span>
+            <span>{followers}</span>
           </div>
         </div>
       </div>

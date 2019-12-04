@@ -5,7 +5,8 @@ import GitMyCard from './GitMyCard';
 class GitMyUser extends Component {
 
     state = {
-        user: [ ]
+        user: [ ],
+        
     }
 
     componentDidMount() {
@@ -13,18 +14,22 @@ class GitMyUser extends Component {
         .get('https://api.github.com/users/lukasjaronis')
         .then(response => {
             console.log(response);
+          
             this.setState({ 
-                user: response.data.name,
+                name: response.data.name,
                 image: response.data.avatar_url,
                 bio: response.data.bio
             });
+            console.log(this.state.user)
         })
     }
+
+
 
     render() {
         return (
             <div>
-            <GitMyCard user={this.state.user} image={this.state.image} bio={this.state.bio} />
+            <GitMyCard name={this.state.name} image={this.state.image} bio={this.state.bio} />
             </div>
         )
     }
