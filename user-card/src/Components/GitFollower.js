@@ -10,15 +10,14 @@ class GitFollower extends Component {
         followers: [],
       }
 
-      componentDidMount = () => {
+      componentDidMount() {
         axios
-        .get(`https://api.github.com/users/lukasjaronis/followers`)
-        .then (res => {
-     
+        .get('https://api.github.com/users/lukasjaronis/followers')
+        .then(response => {
           this.setState({
-            followers: res.data
-          });
-        }) 
+            followers: response.data
+          })
+        })
       }
 
 
@@ -26,14 +25,10 @@ class GitFollower extends Component {
     return (
 
         <div>
-        {this.state.followers.map (follower => (
-             <GitFollowCard key={follower.id}
-                 image={follower.avatar_url} 
-                 followers = {follower.login}
-                 bio = {follower.bio}
-             />
-        ))}
-     </div>
+        {this.state.followers.map(follower => (
+          <GitFollowCard key={follower.id} followers={follower}/>
+      ))}
+        </div>
 
     );
   }

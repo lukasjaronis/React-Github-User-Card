@@ -8,6 +8,11 @@ const GitFollowCardStyles = styled.div`
     align-items: center;
     width: 100%;
     background: #1f2833;
+    border-bottom: 1px solid #45a29e;
+
+    &:hover {
+        background: #0b0c10;
+      }
 
     .innerContainer {
       display: flex;
@@ -46,14 +51,14 @@ const GitFollowCardStyles = styled.div`
   }
 `;
 
-const GitFollowCard = ({ followers, image }) => {
+const GitFollowCard = props => {
   return (
     <GitFollowCardStyles>
       <div className="outerContainer">
         <div className="innerContainer">
-          <img src={image} />
+        <img src={props.followers.avatar_url} alt={props.followers.id} />
           <div className="contentContainer">
-            <span>{followers} </span>
+          <span>{props.followers.login}</span>
           </div>
         </div>
       </div>

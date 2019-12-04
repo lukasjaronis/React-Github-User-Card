@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import styled from 'styled-components';
 
-import GitMyUser from './Components/GitMyUser';
+import GitUserCardUser from './Components/GitUserCardUser';
 import GitFollower from './Components/GitFollower';
 
 const AppStyles = styled.div`
@@ -20,7 +20,7 @@ function App() {
   return (
     <AppStyles>
     <div className="App">
-<GitMyUser />
+<GitUserCardUser />
 <GitFollower />
     </div>
     </AppStyles>
