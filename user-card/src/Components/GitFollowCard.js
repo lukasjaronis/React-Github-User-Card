@@ -46,16 +46,14 @@ const GitFollowCardStyles = styled.div`
   }
 `;
 
-const GitFollowCard = ({ followers, user, image, bio }) => {
+const GitFollowCard = ({ followers, image }) => {
   return (
     <GitFollowCardStyles>
       <div className="outerContainer">
         <div className="innerContainer">
-          <img src={image} alt={user} />
+          <img src={image} />
           <div className="contentContainer">
-            <span>{user}</span>
-            <span>{bio}</span>
-            <span>{followers}</span>
+            <span>{followers} </span>
           </div>
         </div>
       </div>
