@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import GitFollowCard from "./GitFollowCard";
+import GitUserCardUser from "./GitUserCardUser";
 
 class GitFollower extends Component {
 

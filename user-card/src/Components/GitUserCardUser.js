@@ -6,6 +6,8 @@ class GitUserCardUser extends Component {
 
     state = {
         user: [ ],
+        userSearch: [],
+        currentUser: ''
         
     }
 
@@ -18,6 +20,21 @@ class GitUserCardUser extends Component {
                user: response.data
            });
        })
+   }
+
+   componentDidUpdate(prevProps, PrevState) {
+       if (PrevState.currentUser !== this.state.currentUser) {
+           this.setState({
+               userSearch: [...this.state.userSearch, this.state.currentUser]
+           });
+           axios
+           .get(`https://api.github.com/users/${this.state.currentUser}git `)
+           .then(response => {
+               this.setState({
+                   user: response.data
+               });
+           });
+       }
    }
 
 

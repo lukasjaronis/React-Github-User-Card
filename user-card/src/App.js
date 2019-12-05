@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './App.css';
 import styled from 'styled-components';
 
@@ -16,15 +16,20 @@ width: 100%;
 
 `;
 
-function App() {
-  return (
-    <AppStyles>
-    <div className="App">
-<GitUserCardUser />
-<GitFollower />
-    </div>
-    </AppStyles>
-  );
+
+
+
+class App extends Component {
+  render() {
+    return (
+      <AppStyles>
+      <div className="App">
+  <GitUserCardUser />
+  <GitFollower />
+      </div>
+      </AppStyles>
+    );
+  }
 }
 
 export default App;

@@ -52,9 +52,11 @@ const GitFollowCardStyles = styled.div`
 `;
 
 const GitFollowCard = props => {
+ 
   return (
+   
     <GitFollowCardStyles>
-      <div className="outerContainer">
+      <div className="outerContainer" >
         <div className="innerContainer">
         <img src={props.followers.avatar_url} alt={props.followers.id} />
           <div className="contentContainer">
@@ -64,6 +66,8 @@ const GitFollowCard = props => {
       </div>
     </GitFollowCardStyles>
   );
+
+  
 };
 
 export default GitFollowCard;
