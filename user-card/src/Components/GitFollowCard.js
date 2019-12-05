@@ -56,11 +56,11 @@ const GitFollowCard = props => {
   return (
    
     <GitFollowCardStyles>
-      <div className="outerContainer" >
+      <div className="outerContainer" onClick={() => props.searchUsers(props.follower.login)} >
         <div className="innerContainer">
-        <img src={props.followers.avatar_url} alt={props.followers.id} />
+        <img src={props.follower.avatar_url} alt={props.follower.id} />
           <div className="contentContainer">
-          <span>{props.followers.login}</span>
+          <span>{props.follower.login}</span>
           </div>
         </div>
       </div>

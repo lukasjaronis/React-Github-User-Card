@@ -95,17 +95,17 @@ const GitUserCard = props => {
     <GitUserCardStyles>
       <div className="outerContainer">
         <div className="innerContainer">
-          <img src={props.user.avatar_url} alt={props.user.id} />
+          <img src={props.userDetails.avatar_url} alt={props.userDetails.id} />
           <div className="contentContainer">
-            <span>{props.user.login} ({props.user.name})</span>
-            <span>{props.user.bio}</span>
+            <span>{props.userDetails.login} ({props.userDetails.name})</span>
+            <span>{props.userDetails.bio}</span>
           </div>
           <div className="contentContainerTwo">
-          <span><span className="contentText">Followers</span> {props.user.followers}</span>
+          <span><span className="contentText">Followers</span> {props.userDetails.followers}</span>
           <div className="line" />
-          <span><span className="contentText">Following</span> {props.user.following}</span>
+          <span><span className="contentText">Following</span> {props.userDetails.following}</span>
           <div className="line" />
-          <span><span className="contentText">Public Repos</span> {props.user.public_repos}</span>
+          <span><span className="contentText">Public Repos</span> {props.userDetails.public_repos}</span>
           <div className="line" />
           </div>
         </div>
